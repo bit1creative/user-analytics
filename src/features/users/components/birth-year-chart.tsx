@@ -32,13 +32,13 @@ export const BirthYearChart = memo(function BirthYearChart({ data, isLoading }: 
         <CardTitle>Birth Year Distribution</CardTitle>
         <CardDescription>Number of users born in each year</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-0 md:px-6">
         <div className="h-[300px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
               <CartesianGrid strokeDasharray="3 3" className="stroke-primary" />
               <XAxis dataKey="year" tick={{ fontSize: 12 }} tickLine={false} axisLine={false} />
-              <YAxis tick={{ fontSize: 12 }} tickLine={false} axisLine={false} allowDecimals={false} />
+              <YAxis width={10} tick={{ fontSize: 12 }} tickLine={false} axisLine={false} allowDecimals={false} />
               <Tooltip labelStyle={{ fontWeight: 'bold' }} />
               <Line
                 type="monotone"
