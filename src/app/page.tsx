@@ -1,4 +1,5 @@
-import { UsersDashboard } from '@/features/users';
+import { Suspense } from 'react';
+import { UsersDashboardServer, DashboardSkeleton } from '@/features/users';
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
         </div>
       </header>
       <main className="container mx-auto px-4 py-6">
-        <UsersDashboard />
+        <Suspense fallback={<DashboardSkeleton />}>
+          <UsersDashboardServer />
+        </Suspense>
       </main>
     </div>
   );

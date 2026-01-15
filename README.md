@@ -5,6 +5,14 @@
 3. Set up environment variables in a `.env` file (you can copy `.env.example`)
 4. Run the development server: `npm run dev`
 
+
+## Current data flow
+
+1. Fetch all users at once on server
+2. Pass users to client
+3. Calculate statistics
+4. Add refresh functionality for client-side data fetching
+
 # Section "Why?"
 
 ## Why NextJS?
